@@ -67,6 +67,7 @@ fun Pagina1(navController: NavController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "1 run this week",
             color = Color.Yellow,
@@ -78,12 +79,12 @@ fun Pagina1(navController: NavController) {
             textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 11.dp),
+                .padding(horizontal = 32.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
@@ -97,13 +98,13 @@ fun Pagina1(navController: NavController) {
                 Imagen(id)
             }
         }
-
+        Spacer(modifier = Modifier.height(16.dp))
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 30.dp),
+                .padding(horizontal = 40.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Button(
                 onClick = { /* Acción para "More" */ },
@@ -113,10 +114,11 @@ fun Pagina1(navController: NavController) {
                 Text(
                     text = "More",
                     color = Color.Black,
-                    fontSize = 14.sp,
-                    modifier = Modifier.padding(8.dp)
+                    fontSize = 12.sp,
+                    modifier = Modifier.padding(10.dp)
                 )
             }
+            Spacer(modifier = Modifier.height(16.dp))
             Button(
                 onClick = { navController.navigate("RutaDos") },
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color.Gray)
@@ -125,7 +127,7 @@ fun Pagina1(navController: NavController) {
                     text = "Next",
                     color = Color.Black,
                     fontSize = 14.sp,
-                    modifier = Modifier.padding(8.dp)
+                    modifier = Modifier.padding(10.dp)
                 )
             }
         }
